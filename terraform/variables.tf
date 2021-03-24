@@ -20,18 +20,32 @@ description = "Zone inside region"
 default = "europe-north1-c"
 }
 
-variable "vmName" {
-    type = string
-    default = "vm1"
+variable "dbName" {
+  type        = string
+  default     = "myBase"
+  description = "Name of db"
 }
 
-variable "vmType" {
-    type = string
-    default = "f1-micro"
+variable "dbType" {
+  type        = string
+  default     = "db-f1-micro"
+  description = "db Type"
 }
 
-variable "osType" {
-  type = string
-  description = "Image AMI"
-  default = "debian-cloud/debian-9"
+variable "dbVersion" {
+  type        = string
+  default     = "POSTGRES_11"
+  description = "Version of db"
+}
+
+variable "userName" {
+  type        = string
+  default     = "root"
+  description = "username for db access "  
+}
+
+variable "dbPass" {
+  type        = string
+  default     = "passwordio"
+  description = "pass"
 }
